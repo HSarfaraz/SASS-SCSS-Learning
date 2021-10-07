@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>SASS SCSS Learning</h1>
+</div>
+
+
+
+<div class="container" style="margin-top:30px">
+  <div class="row">
+    
+    <div class="col-sm-12">
+      <p>
+      	<pre>
+        SCSS tips: http://smacss.com/book/type-module
+
+        SCSS Folder structure:
+        ----------------------
+        Folder: 0-plugins --> File: plugins-dir.scss, plugin.scss
+
+        example:
+        --------
+        FolderStructure:
+        ----------------
+            0-plugins (Folder)
+                plugins-dir.scss, (Files) (import "0-plugins/plugin-dir"
+                plugin.scss
+            1-base (Folder)
+                base-dir.scss, (Files) (import "0-modules/widget-dir"
+                base.scss
+            2-layouts (Folder)
+                layouts-dir.scss, (Files) (import "0-layouts/header-dir"
+                header.scss
+            3-modules (Folder)
+                modules-dir.scss, (Files) (import "0-modules/widget-dir")
+                widget.scss
+            app.css
+            app.css.map
+            app.scss (import "0-plugins/plugins-dir" ..etc)
+
+        To watch scss file and outputapp.css file: scss --watch app.scss:app.css
+
+        vs code plugin: live scss: to convert at runtime from scss to css 
+
+        Benefits of scss:
+        ----------------
+        We can use
+        1) Operators: 
+            Example:  
+                html{ font-size: 52.5%}
+                a{font-size:5rem + 5rem}
+
+        2) Variables:
+            Example: 
+                $bg-color: #000;
+                header{background-color: $bg-color}
+
+        3) Nesting:
+            Example:
+                header{
+                    h1{color:white}
+                    p{color:white}
+                    &:hover{color:gray}
+                }
+
+        4) Mixing:
+            Example:
+                @mixin mytheme{
+                    color:#fff;
+                    background-color:#000;
+                }
+                header{
+                    @include mytheme; 
+                }
+
+        5) Parameter:
+            Example:
+                @mixin mytheme($parameter1, $parameter2){
+                    color:$parameter1;
+                    background-color:$parameter2;
+                }
+                header{
+                    @include mytheme(#fff, #000); 
+                }
+
+        6) Partials: 
+            Create a seperate file for different component like _mixin.scss, _var.scss
+            Call using like @import "mixin.scss" in main.scss	
+        </pre>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Created By <i>Sarfaraz Hussain</i></p>
+</div>
+
+</body>
+</html>
